@@ -37,8 +37,8 @@ services:
     restart: always
     volumes:
       - ./wp:/bitnami/wordpress
-      # - ./config/apache/httpd.conf:/opt/bitnami/apache/conf/httpd.conf
-      # - ./config/php/php.ini:/opt/bitnami/php/conf/php.ini
+      - ./config/apache/httpd.conf:/opt/bitnami/apache/conf/httpd.conf
+      - ./config/php/php.ini:/opt/bitnami/php/conf/php.ini
     environment:
       VIRTUAL_HOST: ${PROJECT_NAME}.local
       VIRTUAL_PORT: 80
